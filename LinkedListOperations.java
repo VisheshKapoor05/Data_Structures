@@ -46,6 +46,18 @@ public class LinkedListOperations {
 	}
 	
 	
+	public void popLast() {
+		Node currentNode = head;
+		
+		while(currentNode.next.next != null) {
+			currentNode = currentNode.next;
+		}
+		
+		currentNode.next = null;
+		
+	}
+	
+	
 	public void displayNodesData() {
 		Node currentNode = head;
 		
