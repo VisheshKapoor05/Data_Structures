@@ -26,11 +26,11 @@ public class LinkedListOperations {
 	}
 	
 	
-	public void insertBetween(int data, int afterData) {
+	public void insertBetween(int data, int nextData) {
 		Node currentNode = head;
 		
 		// checking if coming node is equal to the node before which we are supposed to add new node.
-		while(currentNode.next.data != afterData) {
+		while(currentNode.next.data != nextData) {
 			currentNode = currentNode.next;
 		}
 		
@@ -38,6 +38,17 @@ public class LinkedListOperations {
 		node.setData(data);
 		node.setNext(currentNode.next);
 		currentNode.next = node;
+	}
+	
+	
+	public Node findNode(int key) {
+		Node currentNode = head;
+		
+		while(currentNode.data != key) {
+			currentNode = currentNode.next;
+		}
+		
+		return currentNode;
 	}
 	
 	

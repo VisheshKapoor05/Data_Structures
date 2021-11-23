@@ -6,14 +6,14 @@ public class LinkedListDemo{
 		LinkedListOperations linkedList = new LinkedListOperations();
 		
 		linkedList.insertFirst(70);
+		linkedList.insertFirst(30);
 		linkedList.insertFirst(56);
-		linkedList.insertBetween(30, 70);
-		linkedList.insertFirst(10);
-		linkedList.insertFirst(20);
 		//linkedList.pop();
-		linkedList.popLast();
+		//linkedList.popLast();
+		Node key = linkedList.findNode(30);
+		System.out.println("key: " +key.data);
 		
-		
+		System.out.println("");
 		linkedList.displayNodesData();
 		
 	}
