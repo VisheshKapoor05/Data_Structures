@@ -23,6 +23,21 @@ public class LinkedListOperations {
 		currentNode.next = node;
 	}
 	
+	public void insertBetween(int data, int afterData) {
+		Node currentNode = head;
+		
+		// checking if coming node is equal to the node before which we are supposed to add new node.
+		while(currentNode.next.data != afterData) {
+			currentNode = currentNode.next;
+		}
+		
+		Node node = new Node();
+		node.setData(data);
+		node.setNext(currentNode.next);
+		currentNode.next = node;
+	}
+	
+	
 	public void displayNodesData() {
 		Node currentNode = head;
 		
