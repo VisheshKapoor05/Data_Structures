@@ -11,6 +11,18 @@ public class LinkedListOperations {
 		head = node;
 	}
 	
+	public void insertLast(int data) {
+		Node currentNode = head;
+		
+		while(currentNode.next != null) {
+			currentNode = currentNode.next;
+		}
+		
+		Node node = new Node();
+		node.setData(data);
+		currentNode.next = node;
+	}
+	
 	public void displayNodesData() {
 		Node currentNode = head;
 		
