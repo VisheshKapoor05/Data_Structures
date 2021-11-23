@@ -41,17 +41,6 @@ public class LinkedListOperations {
 	}
 	
 	
-	public Node findNode(int key) {
-		Node currentNode = head;
-		
-		while(currentNode.data != key) {
-			currentNode = currentNode.next;
-		}
-		
-		return currentNode;
-	}
-	
-	
 	public void insertAfter(int data, int key) {
 		Node currentNode = head;
 		
@@ -64,6 +53,17 @@ public class LinkedListOperations {
 		node.setNext(currentNode.next);
 		currentNode.next = node;
 		
+	}
+	
+	
+	public Node findNode(int key) {
+		Node currentNode = head;
+		
+		while(currentNode.data != key) {
+			currentNode = currentNode.next;
+		}
+		
+		return currentNode;
 	}
 	
 	
@@ -81,6 +81,32 @@ public class LinkedListOperations {
 		
 		currentNode.next = null;
 		
+	}
+	
+	
+	public void deleteNode(int data) {
+		Node currentNode = head;
+		Node previousNode = null;
+		
+		while(currentNode.data != data) {
+			previousNode = currentNode;
+			currentNode = currentNode.next;
+		}
+		
+		previousNode.setNext(currentNode.next);
+	}
+	
+	
+	public int size() {
+		Node currentNode = head;
+		int size = 0;
+		
+		while(currentNode != null) {
+			size++;
+			currentNode = currentNode.next;
+		}
+		
+		return size;
 	}
 	
 	
