@@ -52,6 +52,21 @@ public class LinkedListOperations {
 	}
 	
 	
+	public void insertAfter(int data, int key) {
+		Node currentNode = head;
+		
+		while(currentNode.data != key) {
+			currentNode = currentNode.next;
+		}
+		
+		Node node = new Node();
+		node.setData(data);
+		node.setNext(currentNode.next);
+		currentNode.next = node;
+		
+	}
+	
+	
 	public void pop() {
 		 head = head.next;
 	}
