@@ -8,6 +8,10 @@ public class LinkedListDemo{
 		linkedList.insertFirst(70);
 		linkedList.insertFirst(56);
 		linkedList.insertBetween(30, 70);
+		linkedList.insertFirst(10);
+		linkedList.insertFirst(20);
+		linkedList.pop();
+		
 		
 		linkedList.displayNodesData();
 		
