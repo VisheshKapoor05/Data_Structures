@@ -4,12 +4,14 @@ public class LinkedListOperations {
 	
 	Node head;
 	
+	
 	public void insertFirst(int data) {
 		Node node = new Node();
 		node.setData(data);
 		node.setNext(head);
 		head = node;
 	}
+	
 	
 	public void insertLast(int data) {
 		Node currentNode = head;
@@ -23,6 +25,7 @@ public class LinkedListOperations {
 		currentNode.next = node;
 	}
 	
+	
 	public void insertBetween(int data, int afterData) {
 		Node currentNode = head;
 		
@@ -35,6 +38,11 @@ public class LinkedListOperations {
 		node.setData(data);
 		node.setNext(currentNode.next);
 		currentNode.next = node;
+	}
+	
+	
+	public void pop() {
+		 head = head.next;
 	}
 	
 	
